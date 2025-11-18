@@ -23,6 +23,8 @@ function changeSlide(n){
     showSlide();
 }
 
+
+
 // card
 function quickView(imgPath){
     document.getElementById("quickImage").src = imgPath;
@@ -35,4 +37,35 @@ function closeQuickView(){
 
 function wishlist(){
     alert("Added to Wishlist ❤️");
+}
+
+
+
+let index = 0;
+
+function showInfoSlide(n) {
+    let slides = document.querySelectorAll(".info-slide");
+    let images = document.querySelectorAll(".perfume-img");
+    let dots = document.querySelectorAll(".dot");
+
+    if (n >= slides.length) index = 0;
+    if (n < 0) index = slides.length - 1;
+
+    slides.forEach(slide => slide.classList.remove("active"));
+    images.forEach(img => img.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    images[index].classList.add("active");
+    dots[index].classList.add("active");
+}
+
+function changeInfoSlide(n) {
+    index += n;
+    showInfoSlide(index);
+}
+
+function currentSlide(n) {
+    index = n;
+    showInfoSlide(index);
 }
