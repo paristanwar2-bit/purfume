@@ -6,6 +6,8 @@
 <title>RARE HANU</title>
 <link rel="stylesheet" href="style.css"/>
 <script defer src="script.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -16,7 +18,7 @@
 <!-- NAVBAR -->
 <header id="navbar">
     <div class="logo">
-        <img src="perfumephoto/rare hanu.jpeg" alt="logo">
+        <img src="perfumephoto/rare_hanu-removebg-preview.png" alt="logo">
         <span></span>
     </div>
 
@@ -33,13 +35,16 @@
 
     <div class="icons">
         <i class="fa fa-search"></i>
-        <i class="fa fa-user" onclick="openLogin()"></i>
+        <i class="fa fa-user"></i>
         <i class="fa-regular fa-heart"></i>
         <i class="fa fa-cart-shopping"></i>
     </div>
 
-    <div class="menu-btn" onclick="mobileMenuToggle()"><i class="fa fa-bars"></i></div>
+    <div class="menu-btn" onclick="mobileMenuToggle()">
+        <i class="fa fa-bars"></i>
+    </div>
 </header>
+
 
 
 <!-- BANNER SECTION -->
@@ -277,11 +282,7 @@
             <div class="product-card"><img src="perfumephoto/product4.jpg"><h3>RARE HANU by Titan Steele</h3><p>₹2,795</p></div>
             <div class="product-card"><img src="perfumephoto/product7.jpg"><h3>RARE HANU Nox Pour Femme</h3><p>₹3,995</p></div>
             <div class="product-card"><img src="perfumephoto/product8.jpg"><h3>RARE HANU by Titan Raw</h3><p>₹2,795</p></div>
-            <div class="product-card"><img src="perfumephoto/perfume 1.jpeg"><h3>French Lavender Mist</h3><p>₹2,150</p></div>
-            <div class="product-card"><img src="perfumephoto/product1.jpg"><h3>Black Wood Oud</h3><p>₹3,699</p></div>
-            <div class="product-card"><img src="perfumephoto/perfume 2.jpeg"><h3>Blossom Floral Mist</h3><p>₹1,899</p></div>
-            <div class="product-card"><img src="perfumephoto/product5.jpg"><h3>Royal Gold Luxury</h3><p>₹4,499</p></div>
-        </div>
+          </div>
     </div>
 </section>
 
@@ -335,68 +336,87 @@
         </div>
     </div>
 </section>
-
 <section class="testimonial-section">
     <h2>What Our Customers Say</h2>
-    <div class="testimonials-container">
 
-        <div class="testimonial-card">
-            <img src="perfumephoto/client2.jpg" alt="customer">
-            <h3>Riya Sharma</h3>
-            <div class="stars">★★★★★</div>
-            <p>"Fragrance quality is premium, long-lasting and totally worth the price!"</p>
+    <div class="slider-container">
+
+        <button class="arrow-btn left" id="prevBtn">&#10094;</button>
+
+        <div class="slider-wrapper" id="slider">
+
+            <div class="testimonial-card">
+                <img src="perfumephoto/client2.jpg" />
+                <h3>Riya Sharma</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Fragrance quality is premium and long-lasting!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="perfumephoto/client1.jpg" />
+                <h3>Aman Verma</h3>
+                <div class="stars">★★★★☆</div>
+                <p>"Fast delivery and amazing packaging!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="perfumephoto/client4.jpg" />
+                <h3>Neha Kapoor</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Smells classy and lasts more than 8 hours!”</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="perfumephoto/client3.jpg" />
+                <h3>Rohit Singh</h3>
+                <div class="stars">★★★★☆</div>
+                <p>"Premium feel, worth the price!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="perfumephoto/client6.jpg" />
+                <h3>Simran Kaur</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Perfect for party nights. Loved it!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="perfumephoto/client5.jpg" />
+                <h3>Deepak Choudhary</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Value for money. Will reorder soon!"</p>
+            </div>
+
+
+            <div class="testimonial-card">
+                <img src="perfumephoto/client3.jpg" />
+                <h3>Rohit Singh</h3>
+                <div class="stars">★★★★☆</div>
+                <p>"Premium feel, worth the price!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="perfumephoto/client6.jpg" />
+                <h3>Simran Kaur</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Perfect for party nights. Loved it!"</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="perfumephoto/client5.jpg" />
+                <h3>Deepak Choudhary</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Value for money. Will reorder soon!"</p>
+            </div>
+
         </div>
 
-        <div class="testimonial-card">
-            <img src="perfumephoto/client1.jpg" alt="customer">
-            <h3>Aman Verma</h3>
-            <div class="stars">★★★★☆</div>
-            <p>"Packaging was amazing. Delivery was fast. Will definitely buy again!"</p>
-        </div>
+        <button class="arrow-btn right" id="nextBtn">&#10095;</button>
 
-        <div class="testimonial-card">
-            <img src="perfumephoto/client4.jpg" alt="customer">
-            <h3>Neha Kapoor</h3>
-            <div class="stars">★★★★★</div>
-            <p>"The perfume smells classy and stays for more than 8 hours. Loved it!"</p>
-        </div>
-
-        <div class="testimonial-card">
-            <img src="perfumephoto/client3.jpg" alt="customer">
-            <h3>Rohit Singh</h3>
-            <div class="stars">★★★★☆</div>
-            <p>"Premium feel, better than many expensive brands in the market."</p>
-        </div>
-
-        <div class="testimonial-card">
-            <img src="perfumephoto/client6.jpg" alt="customer">
-            <h3>Simran Kaur</h3>
-            <div class="stars">★★★★★</div>
-            <p>"Amazing fragrance collection, specially for party nights. Recommended!"</p>
-        </div>
-
-        <div class="testimonial-card">
-            <img src="perfumephoto/client5.jpg" alt="customer">
-            <h3>Deepak Choudhary</h3>
-            <div class="stars">★★★★★</div>
-            <p>"Value for money and long lasting. I will reorder soon!"</p>
-        </div>
-
-        <div class="testimonial-card">
-            <img src="perfumephoto/client2.jpg" alt="customer">
-            <h3>Kapil Verma</h3>
-            <div class="stars">★★★★☆</div>
-            <p>"Packaging was amazing. Delivery was fast. Will definitely buy again!"</p>
-        </div>
-
-        <div class="testimonial-card">
-            <img src="perfumephoto/client1.jpg" alt="customer">
-            <h3>Komal Kapoor</h3>
-            <div class="stars">★★★★★</div>
-            <p>"The perfume smells classy and stays for more than 8 hours. Loved it!"</p>
-        </div>
     </div>
 </section>
+
+
 
 
 <!-- video  -->
@@ -478,7 +498,7 @@
 
         <!-- Logo + About -->
         <div class="footer-col footer-about">
-            <img src="perfumephoto/rare hanu.jpeg" alt="Brand Logo" class="footer-logo">
+            <img src="perfumephoto/rare_hanu-removebg-preview.png" alt="Brand Logo" class="footer-logo">
             <p>
                 Discover premium, long-lasting fragrances crafted with passion & elegance.
                 We bring you luxurious scents for every mood, moment & identity.
@@ -511,18 +531,19 @@
 
         <!-- Social -->
         <div class="footer-col">
-            <h4>Follow Us</h4>
-            <div class="social-links">
-                <a href="#">📘</a>
-                <a href="#">📸</a>
-                <a href="#">🐦</a>
-                <a href="#">▶️</a>
-            </div>
-        </div>
+    <h4>Follow Us</h4>
+    <div class="social-links">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+</div>
+
     </div>
 
     <div class="footer-bottom">
-<p>© 2025 Your Brand Name | Designed & Developed with 
+<p>© 2025 RARE HANU | Designed & Developed with 
     <a href="https://tssgtech.com" target="_blank">TSSG TECH</a>
 </p>
     </div>
