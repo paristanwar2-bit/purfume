@@ -1,3 +1,5 @@
+// home page code 
+
 function mobileMenuToggle(){
     document.getElementById("menu").classList.toggle("open");
 }
@@ -59,6 +61,8 @@ function currentSlide(n) {
 }
 
 
+
+// testimonial 
 let testiIndex = 0;
 const slider = document.getElementById("slider");
 const cards = document.querySelectorAll(".testimonial-card");
@@ -98,3 +102,8 @@ function closeQuickView(){
 function wishlist(){
     alert("Added to Wishlist ❤️");
 }
+
+
+// about us page code 
+// about us page code 
+
