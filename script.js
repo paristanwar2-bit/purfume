@@ -1,5 +1,5 @@
 // home page code 
-
+// navbar
 function mobileMenuToggle(){
     document.getElementById("menu").classList.toggle("open");
 }
