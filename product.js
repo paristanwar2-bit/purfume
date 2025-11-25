@@ -3,9 +3,6 @@ function mobileMenuToggle(){
     document.getElementById("menu").classList.toggle("open");
 }
 
-
-
-
 // FILTER CLICK FUNCTION
 const filters = document.querySelectorAll(".filter");
 const cards = document.querySelectorAll(".card");
