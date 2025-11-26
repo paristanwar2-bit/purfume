@@ -29,3 +29,12 @@ filters.forEach(btn => {
         });
     });
 });
+
+
+// responsive
+
+document.querySelectorAll(".filter-option").forEach(opt => {
+  opt.addEventListener("change", () => {
+    console.log("Filter changed: ", opt.value);
+  });
+});
