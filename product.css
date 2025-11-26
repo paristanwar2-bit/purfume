@@ -257,43 +257,51 @@ nav ul li a{
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .main-container {
-    display: flex;
-    flex-direction: row;
-  }
 
-  .filter-box {
-    width: 50px;
-    background: #f5f1ee;
-    padding: 0px;
-    border-radius: 10px;
+    .product-container {
+        display: grid;
+        grid-template-columns: 180px 1fr;  
+        gap: 20px;
+        padding: 20px 4%;
+    }
+
+    /* Filter always left */
+    .filter-box {
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+
+    /* Cards always right */
+    .products {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+    }
+
+    .card img {
+        height: 150px;
+    }
 }
 
-  .filter-section {
-    width: 15%;
-  }
-
-  .cards-section {
-    width: 45%;
-  }
-}
-
-/* EXTRA SMALL SCREENS */
 @media (max-width: 600px) {
-  .filter-section {
-    width: 20%;
-    padding: 2px;
-  }
 
-  .cards-section {
-    width: 40%;
-    gap: 8px;
-  }
+    .product-container {
+        grid-template-columns: 150px 1fr; 
+        gap: 15px;
+    }
 
-  .card img {
-    height: 150px;
-  }
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .card img {
+        height: 130px;
+    }
 }
+
 
 
 
