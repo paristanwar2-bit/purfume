@@ -127,3 +127,50 @@ document.addEventListener("click", (e) => {
         qty.value = parseInt(qty.value) + 1;
     }
 });
+
+
+
+
+// OPEN POPUP (works on mobile + laptop)
+document.querySelectorAll(".view-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+
+        let card = this.closest(".card");
+
+        // Fill popup values
+        document.getElementById("popupImg").src = this.dataset.img;
+        document.getElementById("popupTitle").innerText = this.dataset.title;
+        document.getElementById("popupOldPrice").innerText = this.dataset.old;
+        document.getElementById("popupNewPrice").innerText = this.dataset.new;
+
+        let title = card.querySelector("h3")?.innerText || "";
+        document.getElementById("popupCategory").innerText = "Category: " + title;
+
+        // Show popup
+        document.getElementById("popupModal").style.display = "flex";
+    });
+});
+
+// CLOSE POPUP
+document.getElementById("closePopup").onclick = () => {
+    document.getElementById("popupModal").style.display = "none";
+};
+
+// CLOSE WHEN CLICK OUTSIDE
+document.getElementById("popupModal").addEventListener("click", (e) => {
+    if (e.target.id === "popupModal") {
+        e.target.style.display = "none";
+    }
+});
+
+// QUANTITY BUTTONS
+document.addEventListener("click", (e) => {
+    let qty = document.getElementById("qty");
+
+    if (e.target.id === "minus") {
+        qty.value = Math.max(1, parseInt(qty.value) - 1);
+    }
+    if (e.target.id === "plus") {
+        qty.value = parseInt(qty.value) + 1;
+    }
+});

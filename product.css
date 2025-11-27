@@ -789,3 +789,86 @@ nav ul li a{
 }
 
 
+
+
+
+
+
+
+
+/* MAIN POPUP */
+.popup-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+/* POPUP BOX */
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* CLOSE ICON */
+#closePopup {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* IMAGE */
+.popup-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* TEXT ALIGN */
+.popup-right {
+    text-align: center;
+}
+
+/* PRICE */
+.old-price {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #777;
+}
+
+.new-price {
+    color: #d60000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .popup-content {
+        flex-direction: row;
+        max-width: 650px;
+    }
+
+    .popup-left, .popup-right {
+        width: 50%;
+    }
+
+    .popup-right {
+        text-align: left;
+    }
+}
