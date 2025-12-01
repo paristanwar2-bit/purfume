@@ -60,7 +60,7 @@
         <h3>PERFUMES</h3>
 
         <ul>
-            <li class="filter active" data-category="all">All Products</li>
+            <button class="filter active" data-category="all">All Products</button>
 
             <h4>Car Perfume</h4>
             <li class="filter" data-category="hanging">Lotus Perfume</li>
@@ -243,36 +243,13 @@
             <li class="filter" data-category="Kokum ">Kokum</li>
             <li class="filter" data-category="Organic ">Organic</li>
             <li class="filter" data-category="Refined ">Refined</li>
-
-        
-
         </ul>
     </aside>
 
+
     <!-- 🛒 RIGHT PRODUCTS -->
     <section class="products" id="product-list">
-
-      <!-- PRODUCT CARD -->
-<div class="card" data-category="hanging">
-    <div class="img-box">
-        <img src="perfumephoto/all 1.jpeg">
-        <!-- HOVER ICONS -->
-        <div class="hover-icons">
-            <span><i class="fas fa-shopping-cart"></i></span>
-            <!-- VIEW POPUP BUTTON -->
-            <span class="view-btn" data-img="perfumephoto/all 1.jpeg"
-                  data-title="Car Perfume"
-                  data-old="₹999.00"
-                  data-new="₹998.00">
-                <i class="fas fa-eye"></i>
-            </span>
-            <span><i class="fas fa-heart"></i></span>
-        </div>
-    </div>
-    <h3>Car Perfume</h3>
-    <p>₹1200</p>
-</div>
-<!-- POPUP MODAL -->
+<!-- SINGLE POPUP FOR ALL CARDS -->
 <div id="popupModal" class="popup-modal">
     <div class="popup-content">
 
@@ -299,9 +276,31 @@
                 <a href="login/login.html" class="buy-now-btn">Buy Now</a>
                 <button class="add-cart">Add to Cart</button>
             </div>
-        </div>
 
+        </div>
     </div>
+</div>
+
+
+      <!-- PRODUCT CARD -->
+<div class="card" data-category="hanging">
+    <div class="img-box">
+        <img src="perfumephoto/all 1.jpeg">
+        <!-- HOVER ICONS -->
+        <div class="hover-icons">
+            <span><i class="fas fa-shopping-cart"></i></span>
+            <!-- VIEW POPUP BUTTON -->
+            <span class="view-btn" data-img="perfumephoto/all 1.jpeg"
+                  data-title="Car Perfume"
+                  data-old="₹999.00"
+                  data-new="₹998.00">
+                <i class="fas fa-eye"></i>
+            </span>
+            <span><i class="fas fa-heart"></i></span>
+        </div>
+    </div>
+    <h3>Car Perfume</h3>
+    <p>₹1200</p>
 </div>
 
         <div class="card" data-category="dashboard">
@@ -324,37 +323,6 @@
     <p>₹1100</p>
 </div>
 
-<div id="popupModal" class="popup-modal">
-    <div class="popup-content">
-
-        <span id="closePopup" class="close-popup">&times;</span>
-
-        <div class="popup-left">
-            <img id="popupImg">
-        </div>
-
-        <div class="popup-right">
-            <h2 id="popupTitle"></h2>
-
-            <p class="old-price" id="popupOldPrice"></p>
-            <p class="new-price" id="popupNewPrice"></p>
-
-            <h4>Quantity</h4>
-            <div class="qty-box">
-                <button id="minus">−</button>
-                <input id="qty" type="text" value="1">
-                <button id="plus">+</button>
-            </div>
-
-            <div class="popup-buttons">
-                <a href="login/login.html" class="buy-now-btn">Buy Now</a>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-
         <div class="card" data-category="gel">
              <div class="img-box">  
             <img src="perfumephoto/lavender.jpeg">
@@ -374,39 +342,6 @@
             <p>₹1100</p>
         </div>
 
-        <div id="popupModal" class="popup-modal">
-    <div class="popup-content">
-
-        <span id="closePopup" class="close-popup">&times;</span>
-
-        <div class="popup-left">
-            <img id="popupImg">
-        </div>
-
-        <div class="popup-right">
-            <h2 id="popupTitle"></h2>
-
-            <p class="old-price" id="popupOldPrice"></p>
-            <p class="new-price" id="popupNewPrice"></p>
-
-            <h4>Quantity</h4>
-            <div class="qty-box">
-                <button id="minus">−</button>
-                <input id="qty" type="text" value="1">
-                <button id="plus">+</button>
-            </div>
-
-            <div class="popup-buttons">
-                <a href="login/login.html" class="buy-now-btn">Buy Now</a>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-
-            <p class="category">Categories: Lavender Perfume</p>
-        </div>
-
-    </div>
-</div>
-
         <div class="card" data-category="spray">
             <div class="img-box">
             <img src="perfumephoto/rose.jpeg">
@@ -416,9 +351,9 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/rose.jpeg"
-                  data-title="Perfume"
+                  data-title="Rose Perfume"
                   data-old="₹1500"
-                  data-new="₹1200">
+                  data-new="₹1200"> 
                 <i class="fas fa-eye"></i>
             </span>
             <span><i class="fas fa-heart"></i></span>
@@ -427,38 +362,6 @@
             <h3>Rose Perfume</h3>
             <p>₹1200</p>
         </div>
-<!-- POPUP MODAL -->
-<div id="popupModal" class="popup-modal">
-    <div class="popup-content">
-
-        <span id="closePopup" class="close-popup">&times;</span>
-
-        <div class="popup-left">
-            <img id="popupImg">
-        </div>
-
-        <div class="popup-right">
-            <h2 id="popupTitle"></h2>
-
-            <p class="old-price" id="popupOldPrice"></p>
-            <p class="new-price" id="popupNewPrice"></p>
-
-            <h4>Quantity</h4>
-            <div class="qty-box">
-                <button id="minus">−</button>
-                <input id="qty" type="text" value="1">
-                <button id="plus">+</button>
-            </div>
-
-            <div class="popup-buttons">
-                <a href="login/login.html" class="buy-now-btn">Buy Now</a>
-                <button class="add-cart">Add to Cart</button>
-            </div>
-            <p class="category">Categories: Rose Perfume</p>
-        </div>
-
-    </div>
-</div>
 
 
         <!-- Candle Section -->
@@ -471,7 +374,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/candle1.jpeg"
-                  data-title="Perfume"
+                  data-title="Lemon Grass Candle"
                   data-old="₹1500"
                   data-new="₹1050">
                 <i class="fas fa-eye"></i>
@@ -483,8 +386,6 @@
             <p>₹1050</p>
         </div>
 
-
-
         <div class="card" data-category="fresh">
             <div class="img-box">
             <img src="perfumephoto/candle2.jpeg">
@@ -494,7 +395,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/candle2.jpeg"
-                  data-title="Perfume"
+                  data-title="Lotus Candle"
                   data-old="₹1500"
                   data-new="₹1200">
                 <i class="fas fa-eye"></i>
@@ -515,7 +416,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/candle4.jpeg"
-                  data-title="Perfume"
+                  data-title="Woody Candle"
                   data-old="₹2500"
                   data-new="₹2200">
                 <i class="fas fa-eye"></i>
@@ -536,7 +437,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/candle5.jpeg"
-                  data-title="Perfume"
+                  data-title="Sweet Candle"
                   data-old="₹1500"
                   data-new="₹1300">
                 <i class="fas fa-eye"></i>
@@ -558,7 +459,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/basil.jpeg"
-                  data-title="Perfume"
+                  data-title="Basil"
                   data-old="₹2200"
                   data-new="₹1800">
                 <i class="fas fa-eye"></i>
@@ -579,7 +480,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemon grass.jpeg"
-                  data-title="Perfume"
+                  data-title="Bergamot"
                   data-old="₹1800"
                   data-new="₹1500">
                 <i class="fas fa-eye"></i>
@@ -600,7 +501,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lavender.jpeg"
-                  data-title="Perfume"
+                  data-title="Lavender"
                   data-old="₹2500"
                   data-new="₹1900">
                 <i class="fas fa-eye"></i>
@@ -621,7 +522,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemon grass.jpeg"
-                  data-title="Perfume"
+                  data-title="Calamus"
                   data-old="₹2500"
                   data-new="₹2200">
                 <i class="fas fa-eye"></i>
@@ -642,7 +543,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Carrot Seed"
                   data-old="₹2500"
                   data-new="₹2500">
                 <i class="fas fa-eye"></i>
@@ -663,7 +564,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/cardomom.jpeg"
-                  data-title="Perfume"
+                  data-title="Cederwood"
                   data-old="₹1500"
                   data-new="₹1000">
                 <i class="fas fa-eye"></i>
@@ -684,7 +585,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Rosemary"
                   data-old="₹1500"
                   data-new="₹1400">
                 <i class="fas fa-eye"></i>
@@ -705,7 +606,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Thyme"
                   data-old="₹1500"
                   data-new="₹1200">
                 <i class="fas fa-eye"></i>
@@ -726,7 +627,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Clove"
                   data-old="₹2000"
                   data-new="₹1800">
                 <i class="fas fa-eye"></i>
@@ -747,7 +648,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Coriander"
                   data-old="₹2500"
                   data-new="₹2000">
                 <i class="fas fa-eye"></i>
@@ -768,7 +669,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Elemi"
                   data-old="₹2500"
                   data-new="₹1800">
                 <i class="fas fa-eye"></i>
@@ -789,7 +690,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Eucalyptus"
                   data-old="₹2500"
                   data-new="₹1400">
                 <i class="fas fa-eye"></i>
@@ -810,7 +711,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Galangal"
                   data-old="₹2500"
                   data-new="₹2100">
                 <i class="fas fa-eye"></i>
@@ -831,7 +732,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Grapefruit"
                   data-old="₹1800"
                   data-new="₹1400">
                 <i class="fas fa-eye"></i>
@@ -852,7 +753,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Lime"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -873,7 +774,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Mandarin"
                   data-old="₹1800"
                   data-new="₹1500">
                 <i class="fas fa-eye"></i>
@@ -894,7 +795,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/orange.jpeg"
-                  data-title="Perfume"
+                  data-title="Orange"
                   data-old="₹1800"
                   data-new="₹1500">
                 <i class="fas fa-eye"></i>
@@ -915,7 +816,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Pineapple"
                   data-old="₹1800"
                   data-new="₹1500">
                 <i class="fas fa-eye"></i>
@@ -936,7 +837,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/lemongrass.jpeg"
-                  data-title="Perfume"
+                  data-title="Tea Tree"
                   data-old="₹2800"
                   data-new="₹1800">
                 <i class="fas fa-eye"></i>
@@ -957,7 +858,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Turmeric"
                   data-old="₹1500"
                   data-new="₹1400">
                 <i class="fas fa-eye"></i>
@@ -978,7 +879,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Lemongrass"
                   data-old="₹1500"
                   data-new="₹1400">
                 <i class="fas fa-eye"></i>
@@ -999,7 +900,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Caraway"
                   data-old="₹1900"
                   data-new="₹1700">
                 <i class="fas fa-eye"></i>
@@ -1020,7 +921,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Patchouli"
                   data-old="₹5000"
                   data-new="₹4200">
                 <i class="fas fa-eye"></i>
@@ -1041,7 +942,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Wintergreen"
                   data-old="₹1500"
                   data-new="₹700">
                 <i class="fas fa-eye"></i>
@@ -1062,7 +963,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Geranium"
                   data-old="₹2500"
                   data-new="₹1800">
                 <i class="fas fa-eye"></i>
@@ -1083,7 +984,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Lemon"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -1104,7 +1005,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Rose"
                   data-old="₹2500"
                   data-new="₹2000">
                 <i class="fas fa-eye"></i>
@@ -1125,7 +1026,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Ajowain"
                   data-old="₹1500"
                   data-new="₹1300">
                 <i class="fas fa-eye"></i>
@@ -1146,7 +1047,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Bayleaf"
                   data-old="₹2500"
                   data-new="₹1900">
                 <i class="fas fa-eye"></i>
@@ -1167,7 +1068,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Angelica Root"
                   data-old="₹3500"
                   data-new="₹2450">
                 <i class="fas fa-eye"></i>
@@ -1188,7 +1089,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Celeryseed"
                   data-old="₹2500"
                   data-new="₹1750">
                 <i class="fas fa-eye"></i>
@@ -1209,7 +1110,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Bay"
                   data-old="₹4500"
                   data-new="₹3000">
                 <i class="fas fa-eye"></i>
@@ -1230,7 +1131,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Lily"
                   data-old="₹2500"
                   data-new="₹2000">
                 <i class="fas fa-eye"></i>
@@ -1251,7 +1152,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Lotus"
                   data-old="₹3500"
                   data-new="₹2800">
                 <i class="fas fa-eye"></i>
@@ -1272,7 +1173,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aniseed"
                   data-old="₹2500"
                   data-new="₹1800">
                 <i class="fas fa-eye"></i>
@@ -1293,7 +1194,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Jasmine"
                   data-old="₹2500"
                   data-new="₹1900">
                 <i class="fas fa-eye"></i>
@@ -1314,7 +1215,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Sandalwood"
                   data-old="₹5000"
                   data-new="₹3500">
                 <i class="fas fa-eye"></i>
@@ -1335,7 +1236,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Frankincensese"
                   data-old="₹5500"
                   data-new="₹2500">
                 <i class="fas fa-eye"></i>
@@ -1356,7 +1257,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Ylang Ylang"
                   data-old="₹2500"
                   data-new="₹1600">
                 <i class="fas fa-eye"></i>
@@ -1377,7 +1278,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Citronella"
                   data-old="₹2500"
                   data-new="₹1600">
                 <i class="fas fa-eye"></i>
@@ -1399,7 +1300,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Peppermint"
                   data-old="₹1500"
                   data-new="₹1400">
                 <i class="fas fa-eye"></i>
@@ -1420,7 +1321,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Spearmint"
                   data-old="₹3500"
                   data-new="₹2800">
                 <i class="fas fa-eye"></i>
@@ -1441,7 +1342,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Mentha Citrata"
                   data-old="₹3500"
                   data-new="₹3200">
                 <i class="fas fa-eye"></i>
@@ -1463,7 +1364,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Black Pepper"
                   data-old="₹3500"
                   data-new="₹2500">
                 <i class="fas fa-eye"></i>
@@ -1484,7 +1385,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cardamom"
                   data-old="₹5500"
                   data-new="₹4500">
                 <i class="fas fa-eye"></i>
@@ -1505,7 +1406,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cinnamon"
                   data-old="₹1500"
                   data-new="₹800">
                 <i class="fas fa-eye"></i>
@@ -1526,7 +1427,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cariander"
                   data-old="₹3500"
                   data-new="₹3200">
                 <i class="fas fa-eye"></i>
@@ -1547,7 +1448,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Fenogreek"
                   data-old="₹2500"
                   data-new="₹1800">
                 <i class="fas fa-eye"></i>
@@ -1568,7 +1469,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Ginger"
                   data-old="₹8500"
                   data-new="₹5500">
                 <i class="fas fa-eye"></i>
@@ -1589,7 +1490,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Nutmeg"
                   data-old="₹2500"
                   data-new="₹1800">
                 <i class="fas fa-eye"></i>
@@ -1611,7 +1512,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Apricot"
                   data-old="₹2500"
                   data-new="₹1900">
                 <i class="fas fa-eye"></i>
@@ -1632,7 +1533,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Almond Oil"
                   data-old="₹2500"
                   data-new="₹1900">
                 <i class="fas fa-eye"></i>
@@ -1653,7 +1554,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cajuput"
                   data-old="₹2500"
                   data-new="₹1600">
                 <i class="fas fa-eye"></i>
@@ -1674,7 +1575,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Arachis"
                   data-old="₹2500"
                   data-new="₹2200">
                 <i class="fas fa-eye"></i>
@@ -1695,7 +1596,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Argan"
                   data-old="₹2500"
                   data-new="₹2000">
                 <i class="fas fa-eye"></i>
@@ -1716,7 +1617,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cucumber"
                   data-old="₹2500"
                   data-new="₹2300">
                 <i class="fas fa-eye"></i>
@@ -1737,7 +1638,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Evening Prime Rose"
                   data-old="₹1500"
                   data-new="₹1400">
                 <i class="fas fa-eye"></i>
@@ -1745,7 +1646,7 @@
             <span><i class="fas fa-heart"></i></span>
         </div>
     </div>
-            <h3>Evening Prime rose</h3>
+            <h3>Evening Prime Rose</h3>
             <p>₹1400</p>
         </div>
 
@@ -1758,7 +1659,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Jojoba"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -1779,7 +1680,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Neem"
                   data-old="₹1500"
                   data-new="₹350">
                 <i class="fas fa-eye"></i>
@@ -1800,7 +1701,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Pumpkinseed"
                   data-old="₹2500"
                   data-new="₹1800">
                 <i class="fas fa-eye"></i>
@@ -1821,7 +1722,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Nutmeg"
                   data-old="₹1500"
                   data-new="₹1050">
                 <i class="fas fa-eye"></i>
@@ -1842,7 +1743,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aleo Vera"
                   data-old="₹2500"
                   data-new="₹1500">
                 <i class="fas fa-eye"></i>
@@ -1863,7 +1764,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Black Seed"
                   data-old="₹1500"
                   data-new="₹850">
                 <i class="fas fa-eye"></i>
@@ -1884,7 +1785,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Borage Seed"
                   data-old="₹2500"
                   data-new="₹1500">
                 <i class="fas fa-eye"></i>
@@ -1905,7 +1806,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Ashwagandha"
                   data-old="₹4500"
                   data-new="₹2500">
                 <i class="fas fa-eye"></i>
@@ -1926,7 +1827,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Brahmi"
                   data-old="₹2500"
                   data-new="₹1600">
                 <i class="fas fa-eye"></i>
@@ -1947,7 +1848,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Bhringraj"
                   data-old="₹2500"
                   data-new="₹1500">
                 <i class="fas fa-eye"></i>
@@ -1968,7 +1869,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Amla"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -1990,7 +1891,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Angelica Root Oil"
                   data-old="₹1500"
                   data-new="₹1050">
                 <i class="fas fa-eye"></i>
@@ -2011,7 +1912,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Celeryseed Oil"
                   data-old="₹1500"
                   data-new="₹1050">
                 <i class="fas fa-eye"></i>
@@ -2032,7 +1933,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Bay Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2053,7 +1954,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Lilly Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2074,7 +1975,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Lotus Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2095,7 +1996,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aniseed Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2116,7 +2017,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Jasmine Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2137,7 +2038,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Sandalwood Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2158,7 +2059,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Frankincense Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2179,7 +2080,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Ylang Ylang Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2200,7 +2101,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Citronella Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2222,7 +2123,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aleo Butter"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2243,7 +2144,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cocoa Butter Deodorized"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2264,7 +2165,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Kokum Butter"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2285,7 +2186,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Mango Butter"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2306,7 +2207,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Shea Butter"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2328,7 +2229,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Dementholised Mint Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2349,7 +2250,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Mentha Arvensis Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2370,7 +2271,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Mentha Citrata Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2391,7 +2292,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Menthol Crystal (Bold & Small)"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2412,7 +2313,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Peppermint Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2433,7 +2334,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Spearmint Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2455,7 +2356,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Black Pepper Oil "
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2476,7 +2377,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cardamom Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2497,7 +2398,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cinnamon Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2518,7 +2419,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cariander Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2539,7 +2440,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Fenogreek Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2560,7 +2461,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Ginger Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2581,7 +2482,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Nutmeg Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2603,7 +2504,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aloe Pure Gel (Yellow, Pink & Blue)"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2624,7 +2525,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aloe Pure White Gel"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2645,7 +2546,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aloe Butter"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2666,7 +2567,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aloe Extracts White"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2687,7 +2588,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aloe Leaf Powder"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2709,7 +2610,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Rose Water"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2730,7 +2631,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Kawara Water"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2751,7 +2652,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Jasmine Water"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2772,7 +2673,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cardmom Water"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2793,7 +2694,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aloe Butter"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2814,7 +2715,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Mogra Water"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2835,7 +2736,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Khus Water"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2856,7 +2757,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Vetiver Water"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2877,7 +2778,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cardamom Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2899,7 +2800,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Witch Hazel Liquid Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2920,7 +2821,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Tomato Liquid Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2941,7 +2842,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Pine Bark Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2962,7 +2863,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Amla Liquid Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -2983,7 +2884,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Arnica Liquid Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3004,7 +2905,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Sawpalmetto Liquid Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3025,7 +2926,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Hibiscus Liquid Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3046,7 +2947,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Ritha Liquid Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3067,7 +2968,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Lodhra Oil Soluble Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3088,7 +2989,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Jatamansi Oil Soluble Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3109,7 +3010,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Nagkeshar Oil Soluble Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3130,7 +3031,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Methendi Oil Soluble Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3151,7 +3052,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Nagarmotha Oil Soluble Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3172,7 +3073,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Amla Oil Soluble Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3193,7 +3094,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Brahmi Oil Soluble Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3214,7 +3115,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Bhringraj Oil Soluble Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3235,7 +3136,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Hibiscus Oil Soluble Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3256,7 +3157,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Pumpkin Oil Soluble Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3277,7 +3178,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Aloevera Liquid Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3298,7 +3199,7 @@
             <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Onion Liquid Extracts"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3320,7 +3221,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Camphor Crystal"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3341,7 +3242,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Turpentine Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3362,7 +3263,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Camphor Powder"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3383,7 +3284,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Pine Oil"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3405,7 +3306,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Shea"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3426,7 +3327,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Mango"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3447,7 +3348,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Cocoa"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3468,7 +3369,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Kokum"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3489,7 +3390,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Organic"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3510,7 +3411,7 @@
              <!-- VIEW POPUP BUTTON -->
             <span class="view-btn"
                   data-img="perfumephoto/all.jpeg"
-                  data-title="Perfume"
+                  data-title="Refined"
                   data-old="₹1500"
                   data-new="₹1100">
                 <i class="fas fa-eye"></i>
@@ -3522,7 +3423,6 @@
             <p>₹1050</p>
         </div>
     </section>
-    
 </div>
 
 <footer class="footer">
