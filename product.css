@@ -158,6 +158,75 @@ nav ul li a{
 }
 
 
+/* HOVER ICONS ALWAYS ON MOBILE */
+@media (max-width: 768px) { 
+    .hover-icons {
+        opacity: 1 !important;
+        bottom: 15px !important;
+    }
+}
+
+/* HOVER ICONS NORMAL DESKTOP */
+.hover-icons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover .hover-icons {
+    opacity: 1;
+    bottom: 20px;
+}
+
+/* POPUP RESPONSIVE FIX */
+.popup-content {
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    display: flex;
+    gap: 25px;
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .popup-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .popup-left img {
+        width: 100% !important;
+        max-width: 350px;
+        margin: auto;
+        height: auto !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .popup-content {
+        padding: 18px;
+    }
+
+    .popup-right h2 {
+        font-size: 20px;
+    }
+
+    .popup-buttons button,
+    .popup-buttons a {
+        width: 100%;
+    }
+}
+
+
 /* Layout */
 .product-container {
     display: flex;
