@@ -20,7 +20,6 @@
         <img src="perfumephoto/rare_hanu-removebg-preview.png" alt="logo">
         <span></span>
     </div>
-
     <nav id="menu">
     <ul>
         <li><a href="index.html">HOME</a></li>
@@ -30,14 +29,12 @@
         <li><a href="blog.html">BLOG</a></li>
     </ul>
 </nav>
-
     <div class="icons">
         <i class="fa fa-search"></i>
         <i class="fa fa-user"></i>
         <i class="fa-regular fa-heart"></i>
         <i class="fa fa-cart-shopping"></i>
     </div>
-
     <div class="menu-btn" onclick="mobileMenuToggle()">
         <i class="fa fa-bars"></i>
     </div>
@@ -46,35 +43,46 @@
 <!--BANNER -->
 <section class="about-banner">
     <img src="perfumephoto/banner 3.jpeg" alt="About Banner">
-    
     <div class="banner-text">
         <h1>Product</h1>
     </div>
 </section>
 
+<!-- mobile filter  -->
+ <div class="mobile-filter-btn">
+    <i class="fas fa-ellipsis-v"></i> FILTER
+</div>
+
+<!-- OVERLAY -->
+<div id="filterOverlay"></div>
 <div class="product-container">
+   <!-- FILTER SIDEBAR -->
+<aside class="mobile-filter" id="mobileFilterBox">
+    <div class="mobile-filter-top">
+        <span class="closeMobileFilter">&times;</span>
+        <h3>Perfume</h3>
+    </div>
 
-    <!-- 🔍 LEFT FILTER -->
-     
-    <aside class="filter-box">
-        <h3>PERFUMES</h3>
-
-        <ul>
+    <div class="mobile-filter-content">
             <button class="filter active" data-category="all">All Products</button>
-
-            <h4>Car Perfume</h4>
+            <h4 class="accordion-btn">Car Perfume</h4>
+            <ul class="sublist">
             <li class="filter" data-category="hanging">Lotus Perfume</li>
             <li class="filter" data-category="dashboard">Rose Perfume</li>
             <li class="filter" data-category="gel">Jasmine Perfume</li>
             <li class="filter" data-category="spray">Lavender Perfume</li>
+            </ul>
 
-            <h4>Candle Fragrance</h4>
+            <h4 class="accordion-btn">Candle Fragrance</h4>
+            <ul class="sublist">
             <li class="filter" data-category="floral">Floral Candles</li>
             <li class="filter" data-category="fresh">Fresh Aroma Candles</li>
             <li class="filter" data-category="woody">Woody Candles</li>
             <li class="filter" data-category="sweet">Sweet Candles</li>
+            </ul>
             
-            <h4>Essential Oil</h4>
+            <h4 class="accordion-btn">Essential Oil</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Basil">Basil</li>
             <li class="filter" data-category="Bergamot">Bergamot</li>
             <li class="filter" data-category="Lavender">Lavender</li>
@@ -115,14 +123,17 @@
             <li class="filter" data-category="Frankincense">Frankincensese</li>
             <li class="filter" data-category="Ylang Ylang">Ylang Ylang</li>
             <li class="filter" data-category="Citronella">Citronella</li>
+            </ul>
 
-
-            <h4>Mint Oil</h4>
+            <h4 class="accordion-btn">Mint Oil</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Peppermint">Peppermint</li>
             <li class="filter" data-category="Spearmint">Spearmint</li>
             <li class="filter" data-category="Mentha Citrata">Mentha Citrata</li>
+            </ul>
 
-            <h4>Spices Oil</h4>
+            <h4 class="accordion-btn">Spices Oil</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Black Pepper">Black Pepper</li>
             <li class="filter" data-category="Cardamom">Cardamom</li>
             <li class="filter" data-category="Cinnamon">Cinnamon</li>
@@ -130,9 +141,10 @@
             <li class="filter" data-category="Fenogreek">Fenogreek</li>
             <li class="filter" data-category="Ginger">Ginger</li>
             <li class="filter" data-category="Nutmeg">Nutmeg</li>
+            </ul>
 
-
-            <h4>Carrier Oil</h4>
+            <h4 class="accordion-btn">Carrier Oil</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Apricot">Apricot</li>
             <li class="filter" data-category="Almond Oil">Almond Oil</li>
             <li class="filter" data-category="Cajuput">Cajuput</li>
@@ -151,8 +163,10 @@
             <li class="filter" data-category="Brahmi">Brahmi</li>
             <li class="filter" data-category="Bhringraj">Bhringraj</li>
             <li class="filter" data-category="Amla">Amla</li>
+            </ul>
 
-            <h4>Aromathreapy  Oil</h4>
+            <h4 class="accordion-btn">Aromathreapy  Oil</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Angelica Root Oil">Angelica Root Oil</li>
             <li class="filter" data-category="Celeryseed Oil">Celeryseed Oil</li>
             <li class="filter" data-category="Bay Oil">Bay Oil</li>
@@ -164,23 +178,29 @@
             <li class="filter" data-category="Frankincense Oil">Frankincense Oil</li>
             <li class="filter" data-category="Ylang Ylang Oil">Ylang Ylang Oil</li>
             <li class="filter" data-category="Citronella Oil">Citronella Oil</li>
+            </ul>
 
-            <h4>Natural Butters</h4>
+            <h4 class="accordion-btn">Natural Butters</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Aloe Butter">Aloe Butter</li>
             <li class="filter" data-category="Cocoa Butter Deodorized">Cocoa Butter Deodorized</li>
             <li class="filter" data-category="Kokum Butter">Kokum Butter</li>
             <li class="filter" data-category="Mango Butter">Mango Butter</li>
             <li class="filter" data-category="Shea Butter">Shea Butter</li>
+            </ul>
 
-            <h4>Menthol & Mint Oil</h4>
+            <h4 class="accordion-btn">Menthol & Mint Oil</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Dementholised Mint Oil">Dementholised Mint Oil</li>
             <li class="filter" data-category="Mentha Arvensis Oil">Mentha Arvensis Oil</li>
             <li class="filter" data-category="Mentha Citrata Oil">Mentha Citrata Oil</li>
             <li class="filter" data-category="Menthol Crystal (Bold & Small)">Menthol Crystal (Bold & Small)</li>
             <li class="filter" data-category="Peppermint Oil">Peppermint Oil</li>
             <li class="filter" data-category="Spearmint Oil">Spearmint Oil</li>
+            </ul>
             
-            <h4>Spices Oil & Oleoresin</h4>
+            <h4 class="accordion-btn">Spices Oil & Oleoresin</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Black Pepper Oil">Black Pepper Oil</li>
             <li class="filter" data-category="Cardamom Oil">Cardamom Oil</li>
             <li class="filter" data-category="Cinnamon Oil">Cinnamon Oil</li>
@@ -188,16 +208,19 @@
             <li class="filter" data-category="Fenogreek Oil">Fenogreek Oil</li>
             <li class="filter" data-category="Ginger Oil">Ginger Oil</li>
             <li class="filter" data-category="Nutmeg Oil">Nutmeg Oil</li>
+            </ul>
             
-            <h4>Aleo Vera </h4>
+            <h4 class="accordion-btn">Aleo Vera </h4>
+            <ul class="sublist">
             <li class="filter" data-category="Aloe Pure Gel (Yellow, Pink & Blue)">Aloe Pure Gel (Yellow, Pink & Blue)</li>
             <li class="filter" data-category="Aloe Pure White Gel">Aloe Pure White Gel</li>
             <li class="filter" data-category="Aloe Butter">Aloe Butter</li>
             <li class="filter" data-category="Aloe Extracts White">Aloe Extracts White</li>
             <li class="filter" data-category="Aloe Leaf Powder">Aloe Leaf Powder</li>
+            </ul>
             
-
-            <h4>Water</h4>
+            <h4 class="accordion-btn">Water</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Rose Water">Rose Water</li>
             <li class="filter" data-category="Kawara Water">Kawara Water</li>
             <li class="filter" data-category="Jasmine Water">Jasmine Water</li>
@@ -207,8 +230,10 @@
             <li class="filter" data-category="Khus Water">Khus Water</li>
             <li class="filter" data-category="Vetiver Water">Vetiver Water</li>
             <li class="filter" data-category="Cardamom Oil">Cardamom Oil</li>
+            </ul>
 
-            <h4>Extracts Liquid</h4>
+            <h4 class="accordion-btn">Extracts Liquid</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Witch Hazel Liquid Extracts">Witch Hazel Liquid Extracts</li>
             <li class="filter" data-category="Tomato Liquid Extracts">Tomato Liquid Extracts</li>
             <li class="filter" data-category="Pine Bark Extracts">Pine Bark Extracts</li>
@@ -229,58 +254,53 @@
             <li class="filter" data-category="Pumpkin Oil Soluble Extracts">Pumpkin Oil Soluble Extracts</li>
             <li class="filter" data-category="Aloevera Liquid Extracts">Aloevera Liquid Extracts</li>
             <li class="filter" data-category="Onion Liquid Extracts">Onion Liquid Extracts</li>
+            </ul>
           
-            <h4>Pine & Its Derivatives</h4>
+            <h4 class="accordion-btn">Pine & Its Derivatives</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Camphor Crystal">Camphor Crystal</li>
             <li class="filter" data-category="Turpentine Oil">Turpentine Oil</li>
             <li class="filter" data-category="Camphor Powder">Camphor Powder</li>
             <li class="filter" data-category="Pine Oil">Pine Oil</li>
+            </ul>
 
-            <h4>Butters</h4>
+            <h4 class="accordion-btn">Butters</h4>
+            <ul class="sublist">
             <li class="filter" data-category="Shea ">Shea</li>
             <li class="filter" data-category="Mango ">Mango</li>
             <li class="filter" data-category="Cocoa ">Cocoa</li>
             <li class="filter" data-category="Kokum ">Kokum</li>
             <li class="filter" data-category="Organic ">Organic</li>
             <li class="filter" data-category="Refined ">Refined</li>
-        </ul>
+            </ul>
     </aside>
 
-
-    <!-- 🛒 RIGHT PRODUCTS -->
+    <!--  RIGHT PRODUCTS -->
     <section class="products" id="product-list">
 <!-- SINGLE POPUP FOR ALL CARDS -->
 <div id="popupModal" class="popup-modal">
     <div class="popup-content">
-
         <span id="closePopup" class="close-popup">&times;</span>
-
         <div class="popup-left">
             <img id="popupImg">
         </div>
-
         <div class="popup-right">
             <h2 id="popupTitle"></h2>
-
             <p class="old-price" id="popupOldPrice"></p>
             <p class="new-price" id="popupNewPrice"></p>
-
             <h4>Quantity</h4>
             <div class="qty-box">
                 <button id="minus">−</button>
                 <input id="qty" type="text" value="1">
                 <button id="plus">+</button>
             </div>
-
             <div class="popup-buttons">
                 <a href="login/login.html" class="buy-now-btn">Buy Now</a>
                 <button class="add-cart">Add to Cart</button>
             </div>
-
         </div>
     </div>
 </div>
-
 
       <!-- PRODUCT CARD -->
 <div class="card" data-category="hanging">
@@ -3427,7 +3447,6 @@
 
 <footer class="footer">
     <div class="footer-container">
-
         <!-- Logo + About -->
         <div class="footer-col footer-about">
             <img src="perfumephoto/rare_hanu-removebg-preview.png" alt="Brand Logo" class="footer-logo">
@@ -3471,9 +3490,7 @@
         <a href="#"><i class="fa-brands fa-youtube"></i></a>
     </div>
 </div>
-
     </div>
-
     <div class="footer-bottom">
 <p>© 2025 RARE HANU | Designed & Developed with 
     <a href="https://tssgtech.com" target="_blank">TSSG-TECH</a>

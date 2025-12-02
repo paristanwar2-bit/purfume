@@ -26,7 +26,7 @@ header{
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 35px; 
+    font-size: 28px; 
     font-weight: 700;
     color: #000;
     transform: scale(1.9); 
@@ -34,7 +34,7 @@ header{
 }
 
 .logo img {
-    height: 60px;
+    height: 55px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -90,21 +90,22 @@ nav ul li a{
 
 * {
     margin: 0;
-    padding: 8px;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 /* ABOUT US BANNER */
 .about-banner {
     width: 100%;
-    height: 70vh;           
+    height: 70vh;          
     position: relative;
 }
 
 .about-banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;      
+    object-fit: cover;       
     object-position: center; 
     display: block;
 }
@@ -157,6 +158,167 @@ nav ul li a{
     }
 }
 
+/* DESKTOP  */
+@media (min-width: 769px) {
+    .mobile-filter-btn,
+    .mobile-filter-top {
+        display: none !important;
+    }
+}
+
+/* MOBILE: Auto grid */
+@media (max-width: 768px) {
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+        gap: 18px !important;
+    }
+
+    /* Card full width properly */
+    .card {
+        width: 100% !important;
+    }
+
+    /* Image not cropped weirdly */
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+/* ---------- DEFAULT (Laptop/Tablet) ---------- */
+.filter-box {
+    display: block;
+}
+
+/* DESKTOP  */
+@media (min-width: 769px) {
+    .mobile-filter-btn,
+    .mobile-filter-top {
+        display: none !important;
+    }
+}
+
+/* ---------- MOBILE FILTER ONLY ---------- */
+@media (max-width: 768px) {
+
+    /* Hide Desktop Filter */
+    .filter-box {
+        display: none !important;
+    }
+
+    /* Show mobile button */
+    .mobile-filter-btn {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        background: #000;
+        color: #fff;
+        width: max-content;
+        padding: 10px 16px;
+        border-radius: 6px;
+        margin: 12px auto;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    /* Overlay */
+    #filterOverlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    /* Sliding box */
+    .mobile-filter {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 260px;
+        height: 100vh;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 3px 0 6px rgba(0,0,0,0.25);
+        z-index: 1000;
+        overflow-y: auto;
+        transition: left .35s ease;
+    }
+
+    .mobile-filter.open {
+        left: 0;
+    }
+
+    /* 2-COLUMN PRODUCT GRID ON MOBILE */
+    .products {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 18px !important;
+    }
+}
+
+/* ---------- DEFAULT (Laptop/Tablet) ---------- */
+.filter-box {
+    display: block;
+}
+/* ---------- MOBILE FILTER ONLY ---------- */
+@media (max-width: 768px) {
+
+    /* Hide Desktop Filter */
+    .filter-box {
+        display: none !important;
+    }
+
+    /* Show mobile button */
+    .mobile-filter-btn {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        background: #000;
+        color: #fff;
+        width: max-content;
+        padding: 10px 16px;
+        border-radius: 6px;
+        margin: 12px auto;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    /* Overlay */
+    #filterOverlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    /* Sliding box */
+    .mobile-filter {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 260px;
+        height: 100vh;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 3px 0 6px rgba(0,0,0,0.25);
+        z-index: 1000;
+        overflow-y: auto;
+        transition: left .35s ease;
+    }
+
+    .mobile-filter.open {
+        left: 0;
+    }
+}
 
 /* HOVER ICONS ALWAYS ON MOBILE */
 @media (max-width: 768px) { 
@@ -173,7 +335,7 @@ nav ul li a{
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 12px;
+    gap: 9px;
     opacity: 0;
     transition: 0.3s;
 }
@@ -226,7 +388,6 @@ nav ul li a{
     }
 }
 
-
 /* Layout */
 .product-container {
     display: flex;
@@ -246,14 +407,46 @@ nav ul li a{
     margin-bottom: 15px;
 }
 
-.filter-box h4 {
-    margin-top: 20px;
-    font-size: 15px;
-    color: #7b0036;
+.filter{
+    width: 100%;
+    background: #fff;
+    color: brown;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 12px;
+    border: none;
+    display: block;
+    text-align: left;
 }
 
-.filter-box ul {
+/* H4 → Button */
+.accordion-btn {
+    width: 100%;
+    background: #fff;
+    color: black;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 12px;
+    border: none;
+    display: block;
+    text-align: left;
+}
+
+.accordion-btn.active {
+    background: #fff;
+}
+
+/* H4 ke baad wali sublist hidden */
+.sublist {
     list-style: none;
+    margin: 0;
+    margin-top: 8px;
+    padding-left: 5px;
+    display: none;
 }
 
 .filter-box li {
@@ -261,6 +454,7 @@ nav ul li a{
     margin: 5px 0;
     cursor: pointer;
     background: white;
+    color: #000;
     border-radius: 6px;
     font-size: 14px;
     transition: 0.3s;
@@ -268,9 +462,31 @@ nav ul li a{
 
 .filter-box li:hover,
 .filter-box li.active {
-    background: #7b0036;
-    color: white;
+    background: #fff;
+    color: black;
 }
+
+.accordion-btn {
+    width: 100%;
+    background: #fff;
+    color: black;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 12px;
+    border: none;
+    display: block;
+    text-align: left;
+}
+
+.sublist {
+    display: none;
+    padding-left: 10px;
+    margin-top: 8px;
+}
+
+
 
 /* RIGHT PRODUCTS */
 .products {
@@ -343,14 +559,14 @@ nav ul li a{
 
 /* ICON STYLE */
 .hover-icons span {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     cursor: pointer;
     transition: 0.3s;
@@ -366,9 +582,6 @@ nav ul li a{
     bottom: 20px;
 }
 
-
-
-/* popup */
 /* POPUP BACKDROP */
 .popup-modal {
     position: fixed;
@@ -387,7 +600,7 @@ nav ul li a{
 /* MAIN POPUP BOX */
 .popup-content {
     width: 80%;
-    max-width: 900px;
+    max-width: 700px;
     background: white;
     display: flex;
     gap: 25px;
@@ -406,7 +619,7 @@ nav ul li a{
 /* CLOSE BUTTON */
 .close-popup {
     position: absolute;
-    right: 20px;
+    right: 5px;
     top: 15px;
     font-size: 32px;
     cursor: pointer;
@@ -502,10 +715,7 @@ nav ul li a{
     /* display: inline-block; */
 }
 
-
-/* ------------------------------------------------- */
 /* RESPONSIVE — TABLET (max-width: 900px) */
-/* ------------------------------------------------- */
 @media (max-width: 900px) {
     .popup-content {
         flex-direction: column;
@@ -529,10 +739,128 @@ nav ul li a{
     }
 }
 
+/* POPUP BACKDROP */
+.popup-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    padding: 15px;
+}
 
-/* ------------------------------------------------- */
+/* POPUP BOX */
+.popup-content {
+    width: 90%;
+    max-width: 900px;
+    max-height: 600px;        
+    background: #fff;
+    display: flex;
+    gap: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    overflow-y: auto;        
+    animation: fadeZoom 0.25s ease;
+}
+
+@keyframes fadeZoom {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* CLOSE BUTTON */
+.close-popup {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* LEFT IMAGE */
+.popup-left img {
+    width: 350px;            
+    height: 330px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* RIGHT CONTENT */
+.popup-right {
+    flex: 1;
+}
+
+.popup-right h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.new-price {
+    color: #7b0036;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* ============ TABLET =============== */
+@media (max-width: 900px) {
+    .popup-content {
+        flex-direction: column;  
+        align-items: center;
+        text-align: center;
+        max-height: 600px;      
+    }
+
+    .popup-left img {
+        width: 90%;
+        max-width: 260px;      
+        height: auto;
+    }
+
+    .popup-buttons {
+        justify-content: center;
+    }
+}
+
+/* ============ MOBILE =============== */
+@media (max-width: 600px) {
+
+    .popup-content {
+        padding: 15px;
+        max-height: 550px;       
+    }
+
+    .popup-left img {
+        width: 80%;
+        max-width: 200px;       
+        height: auto;
+        margin: auto;
+    }
+
+    .popup-right h2 {
+        font-size: 20px;
+    }
+
+    .qty-box button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .popup-buttons button,
+    .popup-buttons a {
+        width: 100%;             
+    }
+}
+
 /* RESPONSIVE — MOBILE (max-width: 600px) */
-/* ------------------------------------------------- */
 @media (max-width: 600px) {
     .popup-content {
         padding: 15px;
@@ -541,7 +869,7 @@ nav ul li a{
 
     .close-popup {
         top: 10px;
-        right: 10px;
+        right: 5px;
         font-size: 28px;
     }
 
@@ -562,8 +890,6 @@ nav ul li a{
     }
 }
 
-
-
 /* RESPONSIVE */
 @media (max-width: 900px) {
 
@@ -583,7 +909,7 @@ nav ul li a{
 
     /* Cards always right */
     .products {
-        width: 100%;
+        width: 300px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
         gap: 15px;
@@ -610,7 +936,6 @@ nav ul li a{
         height: 130px;
     }
 }
-
 
 /* BACKDROP */
 .popup-modal {
@@ -645,7 +970,7 @@ nav ul li a{
 
 .close-popup {
     position: absolute;
-    right: 20px;
+    right: 5px;
     top: 15px;
     font-size: 32px;
     cursor: pointer;
@@ -736,6 +1061,18 @@ nav ul li a{
         height: auto;
         margin: 0 auto;
     }
+    .popup-content {
+    width: 80%;
+    max-width: 300px;
+    height: 600px;
+    background: white;
+    display: flex;
+    gap: 25px;
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+    animation: fadeZoom 0.25s ease-in-out;
+}
 }
 
 /* RESPONSIVE MOBILE */
@@ -751,6 +1088,18 @@ nav ul li a{
         width: 100%;
         text-align: center;
     }
+    .popup-content {
+    width: 80%;
+    max-width: 300px;
+    height: 600px;
+    background: white;
+    display: flex;
+    gap: 25px;
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+    animation: fadeZoom 0.25s ease-in-out;
+}
 }
 
 /* footer  */
@@ -856,12 +1205,3 @@ nav ul li a{
         margin-left: 0;
     }
 }
-
-
-
-
-
-
-
-
-

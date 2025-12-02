@@ -1,7 +1,42 @@
-// ---------------- NAVBAR ----------------
-function mobileMenuToggle() {
-    document.getElementById("menu").classList.toggle("open");
-}
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- MOBILE FILTER BUTTON -->
+<div class="mobile-filter-btn">
+    <i class="fas fa-ellipsis-v"></i> FILTER
+</div>
+
+<!-- OVERLAY -->
+<div id="filterOverlay"></div>
+
+<!-- FILTER SIDEBAR -->
+<aside class="mobile-filter" id="mobileFilterBox">
+
+    <div class="mobile-filter-top">
+        <span class="closeMobileFilter">&times;</span>
+        <h3>Perfume</h3>
+    </div>
+
+    <div class="mobile-filter-content">
+
+
+
+
+
+
+
+
+
+
 
 // ---------------- FILTER FUNCTION ----------------
 const filters = document.querySelectorAll(".filter");
@@ -27,6 +62,7 @@ filters.forEach(btn => {
 });
 
 // pop up 
+
 const qty = document.getElementById("qty");
 const plus = document.getElementById("plus");
 const minus = document.getElementById("minus");
@@ -40,6 +76,36 @@ minus.addEventListener("click", () => {
         qty.value = Number(qty.value) - 1;
     }
 });
+
+
+// BUTTONS
+const mobileBtn = document.querySelector(".mobile-filter-btn");
+const mobileBox = document.getElementById("mobileFilterBox");
+const overlay = document.getElementById("filterOverlay");
+const closeBtn = document.querySelector(".closeMobileFilter");
+
+// OPEN FILTER
+mobileBtn.onclick = () => {
+    mobileBox.classList.add("open");
+    overlay.style.display = "block";
+};
+
+// CLOSE FILTER
+function closeFilter() {
+    mobileBox.classList.remove("open");
+    overlay.style.display = "none";
+}
+
+closeBtn.onclick = closeFilter;
+overlay.onclick = closeFilter;
+
+// ACCORDION
+document.querySelectorAll(".accordion-btn").forEach(btn => {
+    btn.onclick = () => {
+        btn.nextElementSibling.classList.toggle("open");
+    };
+});
+
 
 // ---------------- POPUP FUNCTION ----------------
 const viewButtons = document.querySelectorAll(".view-btn");
@@ -88,33 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-// BUTTONS
-const mobileBtn = document.querySelector(".mobile-filter-btn");
-const mobileBox = document.getElementById("mobileFilterBox");
-const overlay = document.getElementById("filterOverlay");
-const closeBtn = document.querySelector(".closeMobileFilter");
-
-// OPEN FILTER
-mobileBtn.onclick = () => {
-    mobileBox.classList.add("open");
-    overlay.style.display = "block";
-};
-
-// CLOSE FILTER
-function closeFilter() {
-    mobileBox.classList.remove("open");
-    overlay.style.display = "none";
-}
-
-closeBtn.onclick = closeFilter;
-overlay.onclick = closeFilter;
-
-// ACCORDION
-document.querySelectorAll(".accordion-btn").forEach(btn => {
-    btn.onclick = () => {
-        btn.nextElementSibling.classList.toggle("open");
-    };
-});
     // FILTER WORKING
     const filters = document.querySelectorAll(".filter");
     const cards = document.querySelectorAll(".card");
@@ -136,3 +175,17 @@ document.querySelectorAll(".accordion-btn").forEach(btn => {
     });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
