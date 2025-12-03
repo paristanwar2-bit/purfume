@@ -4,27 +4,27 @@ function mobileMenuToggle() {
 }
 
 // ---------------- FILTER FUNCTION ----------------
-const filters = document.querySelectorAll(".filter");
-const cards = document.querySelectorAll(".card");
+// const filters = document.querySelectorAll(".filter");
+// const cards = document.querySelectorAll(".card");
 
-filters.forEach(btn => {
-    btn.addEventListener("click", () => {
-        filters.forEach(f => f.classList.remove("active"));
-        btn.classList.add("active");
+// filters.forEach(btn => {
+//     btn.addEventListener("click", () => {
+//         filters.forEach(f => f.classList.remove("active"));
+//         btn.classList.add("active");
 
-        let category = btn.dataset.category;
+//         let category = btn.dataset.category;
 
-        if (category === "all") {
-            cards.forEach(card => card.style.display = "block");
-            return;
-        }
+//         if (category === "all") {
+//             cards.forEach(card => card.style.display = "block");
+//             return;
+//         }
 
-        cards.forEach(card => {
-            card.style.display =
-                card.dataset.category === category ? "block" : "none";
-        });
-    });
-});
+//         cards.forEach(card => {
+//             card.style.display =
+//                 card.dataset.category === category ? "block" : "none";
+//         });
+//     });
+// });
 
 // pop up 
 const qty = document.getElementById("qty");
@@ -132,6 +132,62 @@ document.querySelectorAll(".accordion-btn").forEach(btn => {
                     (cat === "all" || card.dataset.category === cat)
                         ? "block" : "none";
             });
+        });
+    });
+
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ACCORDION OPEN/CLOSE
+    document.querySelectorAll(".accordion-btn").forEach(btn => {
+        btn.onclick = () => {
+            btn.nextElementSibling.classList.toggle("open");
+        };
+    });
+
+    // MOBILE FILTER OPEN/CLOSE
+    const mobileBtn = document.querySelector(".mobile-filter-btn");
+    const mobileBox = document.getElementById("mobileFilterBox");
+    const overlay = document.getElementById("filterOverlay");
+    const closeBtn = document.querySelector(".closeMobileFilter");
+
+    mobileBtn.onclick = () => {
+        mobileBox.classList.add("open");
+        overlay.style.display = "block";
+    };
+
+    function closeFilter() {
+        mobileBox.classList.remove("open");
+        overlay.style.display = "none";
+    }
+
+    closeBtn.onclick = closeFilter;
+    overlay.onclick = closeFilter;
+
+    // FILTER WORKING - FIXED (NOW INSTANT UPDATE)
+    const filters = document.querySelectorAll(".filter");
+    const cards = document.querySelectorAll(".card");
+
+    filters.forEach(f => {
+        f.addEventListener("click", () => {
+
+            // ACTIVE CLASS CHANGE
+            filters.forEach(x => x.classList.remove("active"));
+            f.classList.add("active");
+
+            let cat = f.dataset.category;
+
+            // APPLY FILTER INSTANTLY
+            cards.forEach(card => {
+                card.style.display =
+                    (cat === "all" || card.dataset.category === cat)
+                        ? "block"
+                        : "none";
+            });
+
+            // AUTO CLOSE FILTER ON MOBILE AFTER CLICK
+            mobileBox.classList.remove("open");
+            overlay.style.display = "none";
         });
     });
 

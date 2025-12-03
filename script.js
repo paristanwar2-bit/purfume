@@ -102,8 +102,3 @@ function closeQuickView(){
 function wishlist(){
     alert("Added to Wishlist ❤️");
 }
-
-
-// about us page code 
-// about us page code 
-

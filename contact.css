@@ -93,23 +93,33 @@ nav ul li a{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-/* ABOUT US BANNER */
+}/* =============== BLOG / ABOUT BANNER =============== */
 .about-banner {
     width: 100%;
-    height: 70vh;           /* laptop & desktop */
+    height: 70vh;
     position: relative;
+    overflow: hidden;
 }
 
+/* Banner Image */
 .about-banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;       /* image cut nahi hogi */
-    object-position: center; /* center view */
+    object-fit: cover;
     display: block;
 }
 
-/* TEXT ON BANNER */
+/* Dark Overlay */
+.about-banner::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);   /* Desktop overlay */
+    z-index: 1;
+}
+
+/* Banner Text */
 .banner-text {
     position: absolute;
     top: 50%;
@@ -118,6 +128,7 @@ nav ul li a{
     text-align: center;
     color: white;
     text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    z-index: 2; /* above overlay */
 }
 
 .banner-text h1 {
@@ -126,34 +137,37 @@ nav ul li a{
     margin: 0;
 }
 
-.banner-text p {
-    font-size: 22px;
-    margin-top: 10px;
-}
+/* =============== RESPONSIVE =============== */
 
 /* TABLET */
 @media (max-width: 992px) {
+
     .about-banner {
         height: 50vh;
     }
+
+    .about-banner::after {
+        background: rgba(0,0,0,0.60); /* stronger tablet overlay */
+    }
+
     .banner-text h1 {
         font-size: 45px;
-    }
-    .banner-text p {
-        font-size: 18px;
     }
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
+
     .about-banner {
         height: 35vh;
     }
+
+    .about-banner::after {
+        background: rgba(0,0,0,0.70); /* deep mobile overlay */
+    }
+
     .banner-text h1 {
         font-size: 28px;
-    }
-    .banner-text p {
-        font-size: 14px;
     }
 }
 
@@ -270,16 +284,41 @@ nav ul li a{
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE FIX */
 @media (max-width: 900px) {
     .contact-wrapper {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact-info h3 {
+        font-size: 22px;
+    }
+
+    .contact-info p {
+        font-size: 16px;
     }
 }
 
+/* Extra small (mobile < 480px) */
+@media (max-width: 480px) {
+    .contact-info {
+        padding: 12px;
+    }
 
+    .contact-info h3 {
+        font-size: 20px;
+    }
 
-
+    .contact-info p {
+        font-size: 14px;
+    }
+}
 
 
 

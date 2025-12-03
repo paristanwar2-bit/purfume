@@ -94,7 +94,7 @@ nav ul li a{
     height: auto;
     position:relative;
     overflow:hidden;
-    background:#000;   /* extra area black look */
+    background:#000;  
 }
 
 .banner-slide{
@@ -534,9 +534,11 @@ nav ul li a{
 }
 
 
-/* Background Parallax Section */
+/* Background Parallax Section WITH SOFT DARK OVERLAY */
 .gift-section {
-    background: url('perfumephoto/product3.jpg') center/cover no-repeat;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), /* soft dark overlay */
+        url('perfumephoto/product3.jpg') center/cover no-repeat;
     min-height: 90vh;
     display: flex;
     justify-content: center;
@@ -545,8 +547,9 @@ nav ul li a{
     padding: 30px;
     position: relative;
     color: #ffffff;
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
+
 
 /* Overlay if needed */
 /*
@@ -600,6 +603,13 @@ nav ul li a{
     .gift-content h2 {
         font-size: 28px;
         line-height: 35px;
+    }
+     .gift-section {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            url('perfumephoto/product3.jpg') center/cover no-repeat;
+        background-attachment: scroll; /* mobile-friendly */
+        padding: 40px 20px;
     }
     .gift-content p {
         font-size: 14px;
