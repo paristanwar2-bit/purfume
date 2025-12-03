@@ -192,3 +192,58 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+ 
+
+// view more
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const filters = document.querySelectorAll(".filter");
+    const cards = document.querySelectorAll(".card");
+    const viewMoreBtn = document.getElementById("viewMoreBtn");
+
+    // FUNCTION: SHOW FIRST 8 CARDS ONLY
+    function showLimitedCards() {
+        cards.forEach((card, index) => {
+            card.style.display = index < 8 ? "block" : "none";
+        });
+        viewMoreBtn.style.display = "block";
+    }
+
+    // FUNCTION: SHOW ALL CARDS
+    function showAllCards() {
+        cards.forEach(card => card.style.display = "block");
+        viewMoreBtn.style.display = "none";
+    }
+
+    // CLICK — VIEW MORE BUTTON
+    viewMoreBtn.addEventListener("click", showAllCards);
+
+    // CLICK — FILTER BUTTONS
+    filters.forEach(f => {
+        f.addEventListener("click", () => {
+
+            filters.forEach(x => x.classList.remove("active"));
+            f.classList.add("active");
+
+            let cat = f.dataset.category;
+
+            if (cat === "all") {
+                showLimitedCards();      // Only first 8 shown
+            } else {
+                viewMoreBtn.style.display = "none";
+
+                cards.forEach(card => {
+                    card.style.display =
+                        (card.dataset.category === cat)
+                            ? "block"
+                            : "none";
+                });
+            }
+        });
+    });
+
+    // DEFAULT: SHOW ONLY FIRST 8 ON PAGE LOAD
+    showLimitedCards();
+});
